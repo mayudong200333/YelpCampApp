@@ -8,6 +8,11 @@ const CampgoundSchema = new Schema({
     price:Number,
     description:String,
     location:String,
+    author: {
+        type:Schema.ObjectId,
+        ref:'User'
+
+    },
     reviews:[
         {
             type:Schema.Types.ObjectId,
